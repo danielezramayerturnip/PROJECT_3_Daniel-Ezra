@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Formulir Pendaftaran</h1>
+  <p>Silakan isi formulir ini dengan informasi yang diperlukan</p>
+
+  <form method="post" action="https://register-demo.freecodecamp.org">
+    
+    <!-- data diri -->
+    <fieldset>
+      <label for="nama-depan">Masukkan Nama Depan: 
+        <input id="nama-depan" type="text" name="nama-depan" required>
+      </label>
+      <label for="nama-belakang">Masukkan Nama Belakang: 
+        <input id="nama-belakang" type="text" name="nama-belakang" required>
+      </label>
+      <label for="email">Masukkan Email: 
+        <input id="email" type="email" name="email" required>
+      </label>
+      <label for="kata-sandi-baru">Buat Kata Sandi Baru: 
+        <input id="kata-sandi-baru" type="password" name="password" pattern="[a-z0-5]{8,}" required>
+      </label>
+    </fieldset>
+
+    <!-- tipe akun -->
+    <fieldset>
+      <legend>Tipe akun (wajib)</legend>
+      <label for="akun-pribadi">
+        <input id="akun-pribadi" type="radio" name="tipe-akun" value="pribadi" class="inline" checked> 
+        Pribadi
+      </label>
+      <label for="akun-bisnis">
+        <input id="akun-bisnis" type="radio" name="tipe-akun" value="bisnis" class="inline"> 
+        Bisnis
+      </label>
+    </fieldset>
+
+    <!-- info tambahan -->
+    <fieldset>
+      <label for="foto-profil">Unggah foto profil: 
+        <input id="foto-profil" type="file" name="file">
+      </label>
+      <label for="usia">Masukkan usia (tahun): 
+        <input id="usia" type="number" name="usia" min="13" max="120">
+      </label>
+      <label for="referensi">Dari mana kamu tahu tentang kami?
+        <select id="referensi" name="referensi">
+          <option value="">(pilih salah satu)</option>
+          <option value="1">Berita freeCodeCamp</option>
+          <option value="2">Kanal YouTube freeCodeCamp</option>
+          <option value="3">Forum freeCodeCamp</option>
+          <option value="4">Lainnya</option>
+        </select>
+      </label>
+      <label for="bio">Tulis bio:
+        <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Saya suka ngoding di pantai..."></textarea>
+      </label>
+    </fieldset>
+
+    <a href="https://www.freecodecamp.org/news/terms-of-service">Baca syarat dan ketentuan kami</a>
+    <label for="syarat-ketentuan">
+      <input class="inline" name="syarat" id="syarat-ketentuan" type="checkbox" required>
+      Saya menerima syarat dan ketentuan
+    </label>
+
+    <input type="submit" value="Kirim">
+  </form>
+</body>
+</html>
